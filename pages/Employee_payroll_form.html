@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/payroll_form.css">
+    <link rel="stylesheet" href="../css/payroll_form.css">
     <title>Employee Payroll Form</title>
-    
+    <script defer src = "../js/EmployeePayroll.js"></script>
+    <script defer src="../js/payroll_form.js"></script>   
 </head>
 <body>
     <header class="header-content header">
         <div class="logo-content">
-            <img src="/assets/logo.png" alt="program">
+            <img src="../assets/logo.png" alt="program">
         <div>
         <span class="employee">EMPLOYEE</span><br>
         <span class="employee payroll">PAYROLL</span>
@@ -25,29 +26,30 @@
             <label class="label text" for="name">Name</label>
             <input class="input" type="text" id="name" name="name"
                       placeholder="Your name.." required>
+            <error-output class="text-error" for="text"></error-output>
         </div>
         <div class="row-content">
             <label class="label text" for="profile">Profile image</label>
             <div class="profile-radio-content">
                 <label>
                     <input type="radio" id="profile1" name="profile"
-                            value="/assets/Ellipse -3.png" required>
-                    <img class="profile" id="image1" src="/assets/Ellipse -3.png">
+                            value="../assets/Ellipse -3.png" required>
+                    <img class="profile" id="image1" src="../assets/Ellipse -3.png">
                 </label>
                 <label>
                     <input type="radio" id="profile2" name="profile"
-                            value="/assets/Ellipse 1.png" required>
-                    <img class="profile" id="image2" src="/assets/Ellipse -1.png">
+                            value="../assets/Ellipse -1.png" required>
+                    <img class="profile" id="image2" src="../assets/Ellipse -1.png">
                 </label>
                 <label>
                     <input type="radio" id="profile3" name="profile"
-                            value="/assets/Ellipse -2.png" required>
-                    <img class="profile" id="image3" src="/assets/Ellipse -2.png">
+                            value="../assets/Ellipse -2.png" required>
+                    <img class="profile" id="image3" src="../assets/Ellipse -2.png">
                 </label>
                 <label>
                     <input type="radio" id="profile4" name="profile"
-                            value="/assets/Ellipse -4.png" required>
-                    <img class="profile" id="image4" src="/assets/Ellipse -4.png">
+                            value="../assets/Ellipse -4.png" required>
+                    <img class="profile" id="image4" src="../assets/Ellipse -4.png">
                 </label>
             </div>
         </div>
@@ -83,7 +85,7 @@
         </div>
         <div class="row-content">
             <label class="label text" for="startDate">Start Date</label>
-            <div>
+            <div id="date">
                 <select id="day" name="Day">
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -139,21 +141,20 @@
                     <option value="2016">2016</option>
                 </select>
             </div>
+            <error-output class="date-error" for="text"></error-output>
         </div>
         <div class="row-content">
             <label class="label text" for="notes">Notes</label>
             <textarea id="notes" class="input" style="height: 100px;"></textarea>
         </div>
         <div class="button-content">
-            <a href="./home.html" class="resetButton button cancelButton">Cancel</a>
+            <a href="./home.html" class=" button cancelButton">Cancel</a>
             <div class="submit-reset">
                 <button type="submit" class="button submitButton" id="submitButton">Submit</button>
-                <button type="reset" class="resetButton button">Reset</button>
+                <button type="reset" class=" button">Reset</button>
             </div>
         </div>
     </form>
-    </div>  
-    <script src="../js/EmployeePayroll.js"></script>  
-</body> 
+    </div>
 </body>
 </html>
